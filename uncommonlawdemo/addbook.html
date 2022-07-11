@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add book</title>
+    <style>
+      textarea {
+        display: block;
+      }
+      input {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>UnCommon Law Book Wishlist Tool</h1>
+    <dl>
+      <dd style="font-size: 120%"><i>for use by attorneys</i></dd>
+    </dl>
+    <p style="font-size: 120%">
+      Use this tool to request a book for your client! Please fill out the
+      following form.
+    </p>
+    <form action="./wishlist.html" method="POST">
+      <h2>Attorney information</h2>
+      <label for="">Your Name</label>
+      <input type="text" placeholder="Your Name" value="Raven Q" />
+      <h3>etc...</h3>
+      <h2>Client information</h2>
+      <select name="" id="">
+        <option value="">
+          Dave L (CDCR 395151V, San Quentin Prison 220 Morning Lane, CA 94615)
+          etc
+        </option>
+        <option value="">
+          Avery L (CDCR 65893E, Oakland Prison 443 Murray Road, CA 94658) etc
+        </option>
+        <option value="">
+          William R (CDCR 51648M, Elmwood Correctional Facility 514 Williams
+          Street, CA 946125) etc
+        </option>
+      </select>
+
+      <h3>etc...</h3>
+      <h2>Book information</h2>
+      <label for="">Name of Book</label>
+      <input type="text" placeholder="Name of Book" value="Harry Potter" />
+      <p><i>future step: add commonly requested books in a dropdown menu</i></p>
+      <br />
+      <label for="">Reason for book selection</label>
+      <textarea name="" id="" cols="30" rows="5"></textarea>
+      <h3>etc...</h3>
+      <input type="submit" value="Add to Wishlist" />
+    </form>
+  </body>
+</html>
