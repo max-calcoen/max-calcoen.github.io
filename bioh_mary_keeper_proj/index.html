@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        margin: 0;
+        padding-top: 10px;
+      }
+      h1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .card {
+        width: 300px;
+        height: 85vh;
+        perspective: 1000px;
+      }
+      .card .front,
+      .card .back {
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
+      }
+      .card .front {
+        background-color: rgb(242, 210, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .card .front * {
+        margin: 0px;
+      }
+      .card .back {
+        background-color: #fffbac;
+        transform: rotateY(-180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card:hover .front {
+        transform: rotateY(180deg);
+      }
+      .card:hover .back {
+        transform: rotateY(0deg);
+      }
+      h2 {
+        margin: 0px;
+      }
+      .small {
+        font-size: smaller;
+      }
+      img {
+        max-width: 170px;
+        max-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mary Keeper: Possible Diagnoses</h1>
+    <div class="container">
+      <div class="card">
+        <div class="front">
+          <h2>Graves' Disease</h2>
+          <h2>(hyperthyroidism)</h2>
+          <p>Hover for more!</p>
+        </div>
+        <div class="back">
+          <h2>Graves' Disease</h2>
+          <h2>(hyperthyroidism)</h2>
+          <p>
+            Graves' disease is an autoimmune disorder that affects the thyroid
+            gland, causing it to produce excessive amounts of thyroid hormones.
+            This results in hyperthyroidism, which can cause a wide range of
+            symptoms, including weight loss, fatigue, diarrhea, headaches, and
+            visual disturbances like bitemporal hemianopsia.
+          </p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Thyroid_system.svg/1200px-Thyroid_system.svg.png"
+            alt="Thyroid system"
+          />
+          <p class="small">
+            Figure 1: The production of thyroid hormones is regulated by a
+            feedback system involving the hypothalamus, pituitary gland, and
+            thyroid gland.
+          </p>
+          <p class="small">Image Source: wikipedia</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="front">
+          <h2>Hyperparathyroidism</h2>
+          <p>Hover for more!</p>
+        </div>
+        <div class="back">
+          <h2>Hyperparathyroidism</h2>
+          <p>
+            Hyperparathyroidism occurs when your parathyroid glands cause a high
+            concentration of parathyroid hormone (PTH) in the bloodstream. PTH
+            helps maintain the balance of calcium in the bloodstream and in
+            tissues that require calcium for their function. This is especially
+            important for nerve and muscle function, as well as bone health.
+            There are two main types of Hyperparathyroidism, primary and
+            secondary. Primary Hyperparathyroidism describes the enlargement of
+            one or more parathyroid glands, resulting in high blood calcium
+            levels which cause health problems. Secondary Hyperparathyroidism
+            describes a condition where another disease causes low calcium
+            levels and increased parathyroid hormone levels occur in order to
+            regain normal calcium levels. This condition most frequently occurs
+            after kidney disease and after certain intestinal surgeries or
+            diseases.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="front">
+          <h2>Pituitary Adenoma</h2>
+          <p>Hover for more!</p>
+        </div>
+        <div class="back">
+          <h2>Pituitary Adenoma</h2>
+          <p>
+            A Pituitary Adenoma is a type of tumor that affects the pituitary
+            gland. They are the fourth most common brain tumor, and almost all
+            are benign. The pituitary gland consists of the anterior and
+            posterior pituitary glands, and is located at the base of the brain,
+            below the hypothalamus. It communicates with the rest of the
+            endocrine system, a network of glands and organs that make and
+            release hormones to control bodily functions. The effect of the
+            tumor depends on where it is located. Mary Keeper most likely has an
+            anterior pituitary adenoma, as the hormone changes she experiences
+            match those produced by the anterior pituitary gland.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
